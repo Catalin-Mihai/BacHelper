@@ -4,13 +4,12 @@
 
 */
 
-var WEBSITE_NAME = "website";
+var WEBSITE_NAME = "bachelper";
 
 (function($) {
   "use strict"; // Start of use strict
 
   $("#success-alert").hide();
-//Confirm('Go to Google', 'Are you sure you want to visit Google', 'Yes', 'Cancel', function None(){});
 
   function AlertSucces(object) {
     $("#success-alert").fadeTo(1500, 500).slideUp(500, function(){//ALERT SUS 
@@ -147,11 +146,11 @@ $('.cancelAction, .fa-close').click(function () {
           html = 
              '<div class="obiect-lista">\
                 <div class="form-row">\
-                  <label for="NumeNouLectie">Numele Lectiei</label>\
+                  <label for="NumeNouLectie">Lesson name</label>\
                   <div class="input-group">\
-                    <input type="text" class="form-control" id="NumeNouLectie" data-dbid="'+lectie_selectata+'" placeholder="Fara nume" value="Fara nume">\
+                    <input type="text" class="form-control" id="NumeNouLectie" data-dbid="'+lectie_selectata+'" placeholder="No name" value="No name">\
                     <div class="obiect-icons">\
-                      <i class="fas fa-plus-circle fa-2x" data-toggle="tooltip" data-placement="bottom" title="Salveaza noua lectie" id="new-titlu-lectie"></i>\
+                      <i class="fas fa-plus-circle fa-2x" data-toggle="tooltip" data-placement="bottom" title="Save the lesson" id="new-titlu-lectie"></i>\
                     </div>\
                   </div>\
                 </div>\
@@ -196,9 +195,9 @@ $('.cancelAction, .fa-close').click(function () {
           html = 
             '<div class="obiect-lista">\
               <div class="form-row">\
-                <label for="NumeStergereLectie">Doresti stergerea lectiei?</label>\
+                <label for="NumeStergereLectie">Do you want to delete this lesson?</label>\
                 <div class="input-group">\
-                  <button type="button" class="btn btn-danger" data-dbid="'+lectie_selectata+'" id="delete-lectie">Sterge lectia</button>\
+                  <button type="button" class="btn btn-danger" data-dbid="'+lectie_selectata+'" id="delete-lectie">Delete lesson</button>\
                 </div>\
               </div>\
             </div>\
@@ -208,12 +207,12 @@ $('.cancelAction, .fa-close').click(function () {
           html += 
              '<div class="obiect-lista">\
                 <div class="form-row">\
-                  <label for="NumeLectie">Numele Lectiei</label>\
+                  <label for="NumeLectie">Lesson name</label>\
                   <div class="input-group">\
                     <input type="text" class="form-control" id="NumeLectie" data-dbid="'+lectie_selectata+'" placeholder="'+nume_lectie+'" value="'+nume_lectie+'">\
                     <div class="obiect-icons">\
-                      <i class="fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Salveaza noul nume" id="save-titlu-lectie"></i>\
-                      <i class="fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Revino la vechiul nume" id="undo-titlu-lectie"></i>\
+                      <i class="fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Save the new name" id="save-titlu-lectie"></i>\
+                      <i class="fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Restore the old name" id="undo-titlu-lectie"></i>\
                     </div>\
                   </div>\
                 </div>\
@@ -223,15 +222,15 @@ $('.cancelAction, .fa-close').click(function () {
           html += 
            '<div class="obiect-lista">\
               <div class="form-row">\
-                <label for="PozaLectie">Poza Lectiei (Atentie! Format: 450X325!)</label>\
+                <label for="PozaLectie">Lesson picture (Format: 450X325!)</label>\
                 <div class="input-group">\
                   <div class="custom-file">\
                     <input type="file" class="form-control-file" id="PozaLectie" data-dbid="'+lectie_selectata+'">\
-                    <label class="custom-file-label" for="PozaLectie">Alege poza pentru lectie</label>\
+                    <label class="custom-file-label" for="PozaLectie">Pick lesson picture</label>\
                   </div>\
                   <div class="obiect-icons">\
-                    <i class="fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Salveaza noua poza" id="save-poza-lectie"></i>\
-                    <i class="fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Revino la vechia poza" id="undo-poza-lectie"></i>\
+                    <i class="fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Save picture" id="save-poza-lectie"></i>\
+                    <i class="fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Restore the old picture" id="undo-poza-lectie"></i>\
                   </div>\
                 </div>\
                 <div>\
@@ -278,11 +277,11 @@ $('.cancelAction, .fa-close').click(function () {
         $('#continutCapitol').show();
         var html = '<div class="obiect-lista">\
                   <div class="form-row">\
-                    <label for="NumeNouCapitol">Numele Capitolului</label>\
+                    <label for="NumeNouCapitol">Chapter name</label>\
                     <div class="input-group">\
-                      <input type="text" class="form-control" id="NumeNouCapitol" data-dbid="'+capitol_selectat+'" placeholder="Capitol nou" value="Capitol nou">\
+                      <input type="text" class="form-control" id="NumeNouCapitol" data-dbid="'+capitol_selectat+'" placeholder="New Chapter" value="New Chapter">\
                       <div class="obiect-icons">\
-                        <i class="fas fa-plus-circle fa-2x" id="new-titlu-capitol" data-toggle="tooltip" data-placement="bottom" title="Salveaza noul nume"></i>\
+                        <i class="fas fa-plus-circle fa-2x" id="new-titlu-capitol" data-toggle="tooltip" data-placement="bottom" title="Save the new name"></i>\
                       </div>\
                     </div>\
                   </div>\
@@ -369,7 +368,7 @@ $('.cancelAction, .fa-close').click(function () {
           var dbid = $(this).attr('data-dbid');
 
           //StergeLectie(dbid, object);
-          Confirm('Stergere lectie', 'Esti sigur ca vrei sa stergi lectia?', 'Da', 'Nu', StergeLectie, dbid, object);
+          Confirm('Lesson deletion', 'Are you sure you want to delete this lesson?', 'Yes', 'No', StergeLectie, dbid, object);
       })
 
       .on('click', '#save-titlu-lectie', function() { //Salvare denumire titlu by userinput
@@ -440,7 +439,7 @@ $('.cancelAction, .fa-close').click(function () {
         $('#PreviewImagineLectie').attr('src', poza_veche_lectie);
         poza_noua_lectie = "";
         }
-        else console.log("Nu exista pova_noua"); //Undo poza salvata - Resalvam poza pe care o avem in backup
+        else console.log("Nu exista poza_noua"); //Undo poza salvata - Resalvam poza pe care o avem in backup
       });
 
 
@@ -479,7 +478,7 @@ $('.cancelAction, .fa-close').click(function () {
           var cur_dbid = curentObiect.attr('data-dbid');
 
           //StergeLectie(dbid, object);
-          Confirm('Stergere capitol', 'Esti sigur ca vrei sa stergi capitolul?', 'Da', 'Nu', StergeCapitol, cur_dbid, curentObiect);
+          Confirm('Chapter deletion', 'Are you sure you want to delete this chapter?', 'Yes', 'No', StergeCapitol, cur_dbid, curentObiect);
       })
 
       .on('click', '#new-titlu-capitol', function(){
@@ -902,7 +901,7 @@ $('.cancelAction, .fa-close').click(function () {
         var curentObiect = $(this).closest('.obiect-lista');
         var cur_capitol = curentObiect.attr('data-dbid');
 
-        Confirm('Stergere element', 'Esti sigur ca vrei sa stergi elementul?', 'Da', 'Nu', StergeObiect, cur_capitol, curentObiect);
+        Confirm('Element deletion', 'Are you sure you want to delete this element?', 'Yes', 'No', StergeObiect, cur_capitol, curentObiect);
 
       })
 
@@ -913,9 +912,9 @@ $('.cancelAction, .fa-close').click(function () {
 
         var html = 
         '<div class="form-row">\
-            <label for="NumeAdaugareCapitol">Doresti sa adaugi un nou element?</label>\
+            <label for="NumeAdaugareCapitol">Do you want to add a new element?</label>\
             <div class="input-group">\
-              <button type="button" class="btn btn-success" id="new-obiect" >Adauga element</button>\
+              <button type="button" class="btn btn-success" id="new-obiect" >Add element</button>\
             </div>\
          </div>';
 
@@ -932,9 +931,9 @@ $('.cancelAction, .fa-close').click(function () {
 
         var html = 
         '<div class="form-row">\
-            <label for="NumeAdaugareCapitol">Doresti sa adaugi un nou element?</label>\
+            <label for="NumeAdaugareCapitol">Do you want to add a new element?</label>\
             <div class="input-group">\
-              <button type="button" class="btn btn-success" id="new-obiect" >Adauga element</button>\
+              <button type="button" class="btn btn-success" id="new-obiect" >Add element</button>\
             </div>\
          </div>';
 
@@ -1011,14 +1010,14 @@ $('.cancelAction, .fa-close').click(function () {
 
         var html = 
           '<div class="form-group">\
-            <label for="CategorieSelect">Alege tipul elementului</label>\
+            <label for="CategorieSelect">Chose element type</label>\
             <select class="form-control" id="CategorieSelect">\
-              <option selected disabled value = "0">Click pentru a selecta</option>\
-              <option value="1">Text/Explicatii (Tip:1)</option><!--Text-->\
-              <option value="2">Grafic (Tip:2)</option><!--Grafic-->\
-              <option value="3">Imagine (Tip:3)</option><!--Imagine-->\
-              <option value="4">Chenar cu text (Formule, evidentieri etc.) (Tip:4)</option><!--Element_Lista-->\
-              <option value="5">Card (Chenar cu titlu si continut) (Tip:5)</option><!--Tabel_stil_card-->\
+              <option selected disabled value = "0">Click to select</option>\
+              <option value="1">Text Area/Explanations (Tip:1)</option><!--Text-->\
+              <option value="2">Plot (Tip:2)</option><!--Grafic-->\
+              <option value="3">Image (Tip:3)</option><!--Imagine-->\
+              <option value="4">Text frame (Formulas, highlightings etc.) (Tip:4)</option><!--Element_Lista-->\
+              <option value="5">Text card (a custom frame with head and body) (Tip:5)</option><!--Tabel_stil_card-->\
             </select>\
           </div>';
 
@@ -1041,8 +1040,8 @@ $('.cancelAction, .fa-close').click(function () {
 
             html = 
             '<div class="form-row">\
-              <label for="TextAreaElementNou">Insereaza textul pe care doresti sa il adaugi. Poate fi modificat mai tarziu.</label>\
-              <textarea class="form-control" rows="8" value="12" id="TextAreaElementNou" placeholder="Adauga text..."></textarea>\
+              <label for="TextAreaElementNou">Insert your desired text. It can be changed later.</label>\
+              <textarea class="form-control" rows="8" value="12" id="TextAreaElementNou" placeholder="Add text..."></textarea>\
              </div>\
             ';
 
@@ -1052,8 +1051,8 @@ $('.cancelAction, .fa-close').click(function () {
           
             html = 
             '<div class="form-row">\
-              <label for="TextAreaElementNou">Insereaza textul pe care doresti sa il adaugi. Poate fi modificat mai tarziu.</label>\
-              <textarea class="form-control" rows="8" value="12" id="TextAreaElementNou" placeholder="Adauga text..."></textarea>\
+              <label for="TextAreaElementNou">Insert your desired text. It can be changed later.</label>\
+              <textarea class="form-control" rows="8" value="12" id="TextAreaElementNou" placeholder="Add text..."></textarea>\
              </div>\
             ';
 
@@ -1067,7 +1066,7 @@ $('.cancelAction, .fa-close').click(function () {
                 <div class="input-group">\
                       <div class="custom-file">\
                         <input type="file" class="form-control-file" id="ElementNouImg">\
-                        <label class="custom-file-label" for="ElementNouImg">Alege imaginea</label>\
+                        <label class="custom-file-label" for="ElementNouImg">Browse picture</label>\
                       </div>\
                 </div>\
                 <div>\
@@ -1088,8 +1087,8 @@ $('.cancelAction, .fa-close').click(function () {
           
             html = 
             '<div class="form-row">\
-              <label for="TextAreaElementNou">Insereaza textul pe care doresti sa il adaugi. Poate fi modificat mai tarziu.</label>\
-              <textarea class="form-control" rows="8" value="12" id="TextAreaElementNou" placeholder="Adauga text..."></textarea>\
+              <label for="TextAreaElementNou">Insert your desired text. It can be changed later.</label>\
+              <textarea class="form-control" rows="8" value="12" id="TextAreaElementNou" placeholder="Add text..."></textarea>\
              </div>\
             ';
 
@@ -1099,25 +1098,25 @@ $('.cancelAction, .fa-close').click(function () {
           
             html = 
               '<div class="form-row">\
-                <label for="ElementNou-1">Titlu card</label>\
-                <textarea class="form-control" rows="2" value="12" id="ElementNou-1" placeholder="Adauga un titlu..."></textarea>\
-                <label for="ElementNou-2">Continut card</label>\
-                <textarea class="form-control" rows="8" value="12" id="ElementNou-2" placeholder="Adauga text..."></textarea>\
+                <label for="ElementNou-1">Card title</label>\
+                <textarea class="form-control" rows="2" value="12" id="ElementNou-1" placeholder="Add a title..."></textarea>\
+                <label for="ElementNou-2">Card body</label>\
+                <textarea class="form-control" rows="8" value="12" id="ElementNou-2" placeholder="Add body text..."></textarea>\
                </div>';
 
             break;    
 
           default:
             
-            html = '<div>Nu se poate adauga ceva in acest moment</div>';   
+            html = '<div>Sorry, you cannot add an element right now</div>';   
             break; 
         }
 
         html += 
         '<div class="obiect-icons">\
           <div class="under-obiect">\
-          <i class="fas fa-plus-circle fa-2x" data-toggle="tooltip" data-placement="bottom" data-type="'+tip+'" title="Insereaza noul element" id="save-new-obiect"></i>\
-          <i class="fas fa-times-circle fa-2x" data-toggle="tooltip" data-placement="bottom" title="Renunta la element" id="cancel-obiect"></i>\
+          <i class="fas fa-plus-circle fa-2x" data-toggle="tooltip" data-placement="bottom" data-type="'+tip+'" title="Insert element" id="save-new-obiect"></i>\
+          <i class="fas fa-times-circle fa-2x" data-toggle="tooltip" data-placement="bottom" title="Discard element" id="cancel-obiect"></i>\
           </div>\
         </div>\
         ';
@@ -1234,7 +1233,7 @@ $('.cancelAction, .fa-close').click(function () {
         .append($('<option>', {
     value: 0,
     selected: true,
-    text: 'Selecteaza un capitol'
+    text: 'Select a chapter'
     }))
     .append($('<option>', {
     value: -1,
@@ -1287,13 +1286,13 @@ $('.cancelAction, .fa-close').click(function () {
               .append($('<option>', {
           value: 0,
           selected: true,
-          text: 'Selecteaza un capitol'
+          text: 'Select a chapter'
           }))
           .append(data)
           .append($('<option>', {
           value: -1,
           selected: false,
-          text: '(+) Adauga un capitol nou'
+          text: '(+) Add a new chapter'
           }));
           $('#CapitolSelect option:selected').attr('disabled','disabled');
         

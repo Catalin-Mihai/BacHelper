@@ -13,7 +13,7 @@ require_once(__ROOT__.'/includes/defines.php');
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Editare</title>
+    <title>Edit zone</title>
 
 
     <!-- Bootstrap core JavaScript -->
@@ -43,16 +43,16 @@ require_once(__ROOT__.'/includes/defines.php');
   <body>
 
   	<header>
-  		<h1 class="titlu">Modul editare</h1>
+  		<h1 class="titlu">Editing Mode</h1>
   		<div class="notificare alert alert-success alert-dismissible fade show text-center" role="alert" id="success-alert">
-		  <strong>Salvat!</strong>
+		  <strong>Saved!</strong>
 		</div>
 		<div id="LectieCapitolSelectors">
 		  	<form id = "LectieSelectArea">
 			  <div class="form-group">
-			    <label for="LectieSelect">Selecteaza lectia</label>
+			    <label for="LectieSelect">Select lesson</label>
 			    <select class="form-control" id="LectieSelect">
-			    	<option selected disabled value = "0">Click pentru a selecta</option>
+			    	<option selected disabled value = "0">Click to select</option>
 			      	<?php
 				      	MySQL::Connect();
 				      	$queryy = "SELECT * FROM `lectii`";
@@ -65,25 +65,25 @@ require_once(__ROOT__.'/includes/defines.php');
 				      		}
 				      	}
 				      	MySQL::CloseConnection();
-				      	echo '<option value="-1">(+) Adauga lectie noua</option>';
+				      	echo '<option value="-1">(+) Add new lesson</option>';
 			      	?>
 			    </select>
 			  </div>
 			</form>
 			<form id="CapitolSelectArea">
 			  <div class="form-group">
-			    <label for="CapitolSelect">Selecteaza capitolul</label>
+			    <label for="CapitolSelect">Select chapter</label>
 			    <select class="form-control" disabled id="CapitolSelect">
-			    	<option selected disabled>Click pentru a selecta</option>
+			    	<option selected disabled>Click to select</option>
 			    </select>
 			  </div> 
 			</form>
 		</div>	
 	</header>	
 		<div class="corp">
-			<h1 class="titlu" id="titlu-lectie">Lectie</h1>
+			<h1 class="titlu" id="titlu-lectie">Lesson space</h1>
 			<div id="continutLectie"></div>	
-			<h1 class="titlu" id="titlu-capitole">Capitole</h1>	
+			<h1 class="titlu" id="titlu-capitole">Chapter space</h1>	
 			<div id="continutCapitol"></div>
 		</div>
 		<script src="js/mathjax_custom.js"></script>

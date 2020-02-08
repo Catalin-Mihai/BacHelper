@@ -43,20 +43,20 @@ MySQL::Connect();
 				$out_string = 
 					'<div class="obiect-lista" data-dbid="'.$capitol.'">
 		              <div class="form-row">
-		                <label for="NumeStergereCapitol">Doresti stergerea capitolului?</label>
+		                <label for="NumeStergereCapitol">Do you want to delete the chapter?</label>
 		                <div class="input-group">
-		                  <button type="button" class="btn btn-danger" id="delete-capitol">Sterge capitolul</button>
+		                  <button type="button" class="btn btn-danger" id="delete-capitol">Delete chapter</button>
 		                </div>
 		              </div>
 		            </div>
 					<div class="obiect-lista">
 						<div class="form-row">
-							<label for="NumeCapitol">Numele Capitolului</label>
+							<label for="NumeCapitol">Chapter name</label>
 							<div class="input-group">
 								<input type="text" class="form-control" id="NumeCapitol" data-dbid="'.$capitol.'" placeholder="'.$row2["NumeCapitol"].'" value="'.$row2["NumeCapitol"].'">
 								<div class="obiect-icons">
-									<i class="fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Salveaza noul nume" id="save-titlu-capitol"></i>
-									<i class="fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Revino la vechiul nume" id="undo-titlu-capitol"></i>
+									<i class="fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Save the new name" id="save-titlu-capitol"></i>
+									<i class="fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Restore the old name" id="undo-titlu-capitol"></i>
 								</div>
 							</div>
 					  	</div>
@@ -92,17 +92,17 @@ MySQL::Connect();
 								'<div class="obiect-lista" data-dbid="'.$row['ID'].'" data-type="'.__TEXT__.'">
 							   		<div class="informatii">'.$info.'</div>
 							   		<div class="form-row">
-							   			<label for="'.$label_for.'">Text</label>
+							   			<label for="'.$label_for.'">Text Area</label>
 							   			<textarea class="form-control" rows="8" value="12" id="'.$label_for.'">'.$row['Text'].'</textarea>
 							   		</div>
 							   		<div class="obiect-icons">
 								   		<div class="under-obiect">
-											<i class="save-icon fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Salveaza noul nume" id="save-obiect-data"></i>
-											<i class="undo-icon fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Revino la vechiul nume" id="undo-obiect-data"></i>
-											<i class="preview-icon fas fa-glasses fa-2x" data-toggle="tooltip" data-placement="bottom" title="Previzualizeaza elementul" id="preview-obiect" href="#'.$modalname.'"></i>
-											<i class="move-up-icon fas fa-arrow-circle-up fa-2x" data-toggle="tooltip" data-placement="bottom" title="Muta elementul mai sus" id="move-up-obiect"></i>
-											<i class="move-down-icon fas fa-arrow-circle-down fa-2x" data-toggle="tooltip" data-placement="bottom" title="Muta elementul mai jos" id="move-down-obiect"></i>
-											<i class="delete-icon fas fa-trash fa-2x" data-toggle="tooltip" data-placement="bottom" title="Sterge elementul" id="delete-obiect"></i>
+											<i class="save-icon fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Save the new name" id="save-obiect-data"></i>
+											<i class="undo-icon fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Restore the old name" id="undo-obiect-data"></i>
+											<i class="preview-icon fas fa-glasses fa-2x" data-toggle="tooltip" data-placement="bottom" title="Preview the element" id="preview-obiect" href="#'.$modalname.'"></i>
+											<i class="move-up-icon fas fa-arrow-circle-up fa-2x" data-toggle="tooltip" data-placement="bottom" title="Move element above" id="move-up-obiect"></i>
+											<i class="move-down-icon fas fa-arrow-circle-down fa-2x" data-toggle="tooltip" data-placement="bottom" title="Move element below" id="move-down-obiect"></i>
+											<i class="delete-icon fas fa-trash fa-2x" data-toggle="tooltip" data-placement="bottom" title="Delete element" id="delete-obiect"></i>
 										</div>	
 									</div>
 
@@ -138,17 +138,17 @@ MySQL::Connect();
 								'<div class="obiect-lista" data-dbid="'.$row['ID'].'" data-type="'.__ELEMENT_LISTA__.'">
 									<div class="informatii">'.$info.'</div>
 									<div class="form-row">
-							   			<label for="'.$label_for.'">Element lista</label>
+							   			<label for="'.$label_for.'">Text frame</label>
 							   			<textarea class="form-control" rows="8" value="12" id="'.$label_for.'">'.$row['Text'].'</textarea>
 							   		</div>
 							   		<div class="obiect-icons">
 								   		<div class="under-obiect">
-											<i class="save-icon fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Salveaza noul nume" id="save-obiect-data"></i>
-											<i class="undo-icon fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Revino la vechiul nume" id="undo-obiect-data"></i>
-											<i class="preview-icon fas fa-glasses fa-2x" data-toggle="tooltip" data-placement="bottom" title="Previzualizeaza elementul" id="preview-obiect" href="#'.$modalname.'"></i>
-											<i class="move-up-icon fas fa-arrow-circle-up fa-2x" data-toggle="tooltip" data-placement="bottom" title="Muta elementul mai sus" id="move-up-obiect"></i>
-											<i class="move-down-icon fas fa-arrow-circle-down fa-2x" data-toggle="tooltip" data-placement="bottom" title="Muta elementul mai jos" id="move-down-obiect"></i>
-											<i class="delete-icon fas fa-trash fa-2x" data-toggle="tooltip" data-placement="bottom" title="Sterge elementul" id="delete-obiect"></i>
+											<i class="save-icon fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Save the new name" id="save-obiect-data"></i>
+											<i class="undo-icon fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Restore the old name" id="undo-obiect-data"></i>
+											<i class="preview-icon fas fa-glasses fa-2x" data-toggle="tooltip" data-placement="bottom" title="Preview the element" id="preview-obiect" href="#'.$modalname.'"></i>
+											<i class="move-up-icon fas fa-arrow-circle-up fa-2x" data-toggle="tooltip" data-placement="bottom" title="Move element above" id="move-up-obiect"></i>
+											<i class="move-down-icon fas fa-arrow-circle-down fa-2x" data-toggle="tooltip" data-placement="bottom" title="Move element below" id="move-down-obiect"></i>
+											<i class="delete-icon fas fa-trash fa-2x" data-toggle="tooltip" data-placement="bottom" title="Delete element" id="delete-obiect"></i>
 										</div>	
 									</div>
 
@@ -194,17 +194,17 @@ MySQL::Connect();
 								'<div class="obiect-lista" data-dbid="'.$row['ID'].'" data-type="'.__GRAFIC__.'">
 							   		<div class="informatii">'.$info.'</div>
 							   		<div class="form-row">
-							   			<label for="'.$label_for.'">Formula matematica pentru grafic</label>
+							   			<label for="'.$label_for.'">Mathematical formula for the plot. Example: y=x^2</label>
 							   			<textarea class="form-control" rows="8" value="12" id="'.$label_for.'">'.$row['Text'].'</textarea>
 							   		</div>
 							   		<div class="obiect-icons">
 								   		<div class="under-obiect">
-											<i class="save-icon fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Salveaza noul nume" id="save-obiect-data"></i>
-											<i class="undo-icon fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Revino la vechiul nume" id="undo-obiect-data"></i>
-											<i class="preview-icon fas fa-glasses fa-2x" data-toggle="tooltip" data-placement="bottom" title="Previzualizeaza elementul" id="preview-obiect" href="#'.$modalname.'"></i>
-											<i class="move-up-icon fas fa-arrow-circle-up fa-2x" data-toggle="tooltip" data-placement="bottom" title="Muta elementul mai sus" id="move-up-obiect"></i>
-											<i class="move-down-icon fas fa-arrow-circle-down fa-2x" data-toggle="tooltip" data-placement="bottom" title="Muta elementul mai jos" id="move-down-obiect"></i>
-											<i class="delete-icon fas fa-trash fa-2x" data-toggle="tooltip" data-placement="bottom" title="Sterge elementul" id="delete-obiect"></i>
+											<i class="save-icon fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Save the new name" id="save-obiect-data"></i>
+											<i class="undo-icon fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Restore the old name" id="undo-obiect-data"></i>
+											<i class="preview-icon fas fa-glasses fa-2x" data-toggle="tooltip" data-placement="bottom" title="Preview the element" id="preview-obiect" href="#'.$modalname.'"></i>
+											<i class="move-up-icon fas fa-arrow-circle-up fa-2x" data-toggle="tooltip" data-placement="bottom" title="Move element above" id="move-up-obiect"></i>
+											<i class="move-down-icon fas fa-arrow-circle-down fa-2x" data-toggle="tooltip" data-placement="bottom" title="Move element below" id="move-down-obiect"></i>
+											<i class="delete-icon fas fa-trash fa-2x" data-toggle="tooltip" data-placement="bottom" title="Delete element" id="delete-obiect"></i>
 										</div>	
 									</div>
 
@@ -249,19 +249,19 @@ MySQL::Connect();
 								'<div class="obiect-lista" data-dbid="'.$row['ID'].'" data-type="'.__TABEL_STIL_CARD__.'">
 							   		<div class="informatii">'.$info.'</div>
 							   		<div class="form-row">
-							   			<label for="'.$label_for.'-1">Titlu card</label>
+							   			<label for="'.$label_for.'-1">Card title</label>
 							   			<textarea class="form-control" rows="2" value="12" id="'.$label_for.'-1">'.$title.'</textarea>
-							   			<label for="'.$label_for.'-2">Continut card</label>
+							   			<label for="'.$label_for.'-2">Card body</label>
 							   			<textarea class="form-control" rows="8" value="12" id="'.$label_for.'-2">'.$body.'</textarea>
 							   		</div>
 							   		<div class="obiect-icons">
 								   		<div class="under-obiect">
-											<i class="save-icon fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Salveaza noul nume" id="save-obiect-data"></i>
-											<i class="undo-icon fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Revino la vechiul nume" id="undo-obiect-data"></i>
-											<i class="preview-icon fas fa-glasses fa-2x" data-toggle="tooltip" data-placement="bottom" title="Previzualizeaza elementul" id="preview-obiect" href="#'.$modalname.'"></i>
-											<i class="move-up-icon fas fa-arrow-circle-up fa-2x" data-toggle="tooltip" data-placement="bottom" title="Muta elementul mai sus" id="move-up-obiect"></i>
-											<i class="move-down-icon fas fa-arrow-circle-down fa-2x" data-toggle="tooltip" data-placement="bottom" title="Muta elementul mai jos" id="move-down-obiect"></i>
-											<i class="delete-icon fas fa-trash fa-2x" data-toggle="tooltip" data-placement="bottom" title="Sterge elementul" id="delete-obiect"></i>
+											<i class="save-icon fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Save the new name" id="save-obiect-data"></i>
+											<i class="undo-icon fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Restore the old name" id="undo-obiect-data"></i>
+											<i class="preview-icon fas fa-glasses fa-2x" data-toggle="tooltip" data-placement="bottom" title="Preview the element" id="preview-obiect" href="#'.$modalname.'"></i>
+											<i class="move-up-icon fas fa-arrow-circle-up fa-2x" data-toggle="tooltip" data-placement="bottom" title="Move element above" id="move-up-obiect"></i>
+											<i class="move-down-icon fas fa-arrow-circle-down fa-2x" data-toggle="tooltip" data-placement="bottom" title="Move element below" id="move-down-obiect"></i>
+											<i class="delete-icon fas fa-trash fa-2x" data-toggle="tooltip" data-placement="bottom" title="Delete element" id="delete-obiect"></i>
 										</div>	
 									</div>
 
@@ -310,11 +310,11 @@ MySQL::Connect();
 								'<div class="obiect-lista" data-dbid="'.$row['ID'].'" data-type="'.__IMAGINE__.'">
 							   		<div class="informatii">'.$info.'</div>
 							   		<div class="form-row">
-							   			<label for="'.$label_for.'">Imagine</label>
+							   			<label for="'.$label_for.'">Image</label>
 							   			<div class="input-group">
 							              <div class="custom-file">
 							                <input type="file" class="form-control-file" id="'.$label_for.'">
-							                <label class="custom-file-label" for="'.$label_for.'">Alege imaginea</label>
+							                <label class="custom-file-label" for="'.$label_for.'">Browse picture</label>
 							              </div>						              
 							            </div>
 							            <div>
@@ -323,12 +323,12 @@ MySQL::Connect();
 							   		</div>
 							   		<div class="obiect-icons">
 								   		<div class="under-obiect">
-											<i class="save-icon fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Salveaza noul nume" id="save-obiect-data"></i>
-											<i class="undo-icon fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Revino la vechiul nume" id="undo-obiect-data"></i>
-											<i class="preview-icon fas fa-glasses fa-2x" data-toggle="tooltip" data-placement="bottom" title="Previzualizeaza elementul" id="preview-obiect" href="#'.$modalname.'"></i>
-											<i class="move-up-icon fas fa-arrow-circle-up fa-2x" data-toggle="tooltip" data-placement="bottom" title="Muta elementul mai sus" id="move-up-obiect"></i>
-											<i class="move-down-icon fas fa-arrow-circle-down fa-2x" data-toggle="tooltip" data-placement="bottom" title="Muta elementul mai jos" id="move-down-obiect"></i>
-											<i class="delete-icon fas fa-trash fa-2x" data-toggle="tooltip" data-placement="bottom" title="Sterge elementul" id="delete-obiect"></i>
+											<i class="save-icon fas fa-save fa-2x" data-toggle="tooltip" data-placement="bottom" title="Save the new name" id="save-obiect-data"></i>
+											<i class="undo-icon fas fa-undo fa-2x" data-toggle="tooltip" data-placement="bottom" title="Restore the old name" id="undo-obiect-data"></i>
+											<i class="preview-icon fas fa-glasses fa-2x" data-toggle="tooltip" data-placement="bottom" title="Preview the element" id="preview-obiect" href="#'.$modalname.'"></i>
+											<i class="move-up-icon fas fa-arrow-circle-up fa-2x" data-toggle="tooltip" data-placement="bottom" title="Move element above" id="move-up-obiect"></i>
+											<i class="move-down-icon fas fa-arrow-circle-down fa-2x" data-toggle="tooltip" data-placement="bottom" title="Move element below" id="move-down-obiect"></i>
+											<i class="delete-icon fas fa-trash fa-2x" data-toggle="tooltip" data-placement="bottom" title="Delete element" id="delete-obiect"></i>
 										</div>	
 									</div>
 
@@ -370,9 +370,9 @@ MySQL::Connect();
 				$out_string .=
 				'<div class="obiect-lista" data-dbid="-1" data-capitol = "'.$capitol.'">
 	              <div class="form-row">
-	                <label for="NumeAdaugareCapitol">Doresti sa adaugi un nou element?</label>
+	                <label for="NumeAdaugareCapitol">Do you want to add a new element?</label>
 	                <div class="input-group">
-	                  <button type="button" class="btn btn-success" id="new-obiect" >Adauga element</button>
+	                  <button type="button" class="btn btn-success" id="new-obiect" >Add element</button>
 	                </div>
 	              </div>
 		        </div>';
