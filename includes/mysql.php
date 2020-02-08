@@ -4,7 +4,7 @@
         public static $ms_hMySQL;
         public static function Connect()
         {
-            self::$ms_hMySQL = new mysqli("localhost", "root", "", "website");
+            self::$ms_hMySQL = new mysqli("localhost", "root", "", "bachelper");
             /* check connection */
             if (self::$ms_hMySQL->connect_errno) {
                 printf("Connect failed: %s\n", self::$ms_hMySQL->connect_errno);
