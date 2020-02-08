@@ -47,7 +47,7 @@ $lectie = intval($_GET['lectie']);
     <!-- Navigation -->
     <nav class="navbar navbar-default bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="index.php">Matematica</a>
+        <a class="navbar-brand js-scroll-trigger" href="index.php">Bac helper</a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" id = "ButtonClick" data-toggle="collapse" data-target="#navbarResponsive2" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>

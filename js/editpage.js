@@ -180,7 +180,7 @@ $('.cancelAction, .fa-close').click(function () {
           //Acum legat de modificarile lectiei
           $('#CapitolSelectArea').show();
           $('#continutLectie').css("display", "block");
-          $("#titlu-lectie").text('Lectie');
+          $("#titlu-lectie").text('Lesson');
           $("#titlu-lectie").show();
 
           var loc = window.location.pathname;
