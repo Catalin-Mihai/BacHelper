@@ -12,7 +12,6 @@ $capitol = intval($_GET['capitol']);
 
 if(isset($_GET['tip']))
 $tip = $_GET['tip'];
-
 MySQL::Connect();
 	
 	switch ($tip) {
